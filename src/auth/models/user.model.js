@@ -42,7 +42,7 @@ Users.authenticateBasic = async function (username,password) {
         // console.log("ssssssssssssssssssssssssaa",valid);
         if(valid) {
             // generate a new token
-        let exp = Math.floor(Date.now()/1000)+40;//expiaran time 
+        let exp = Math.floor(Date.now()/1000)+600;// time 
             let newToken = jwt.sign({exp :exp,userName:user.userName},SECRET);
             user.token = newToken;
             return user;
@@ -68,7 +68,7 @@ Users.validateToken = async function(token) {
     if(user) {
         return user
     }
-    throw new Error('invalid token')
+    throw new Error('invalid token'); //send the error to catch in bearer.auth file
 };
 //=====End Users.validateToken
 

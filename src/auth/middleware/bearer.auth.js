@@ -18,8 +18,10 @@ module.exports = async (req,res,next)=>{
                 res.status(403).send('invalid ddddddddddddd');
             }
         } catch (error) {
-            res.status(403).send('invalid ddddddddddddd');
+            res.status(403).send(`${error}`);
         }
 
+    }else{
+        next('token is not correct or null');
     }
 }
