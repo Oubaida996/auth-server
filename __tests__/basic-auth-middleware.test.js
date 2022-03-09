@@ -37,7 +37,7 @@ describe('Auth Middleware', () => {
 
     it('fails a login for a user (admin) with the incorrect basic credentials', () => {
 
-      // Change the request to match this test case
+      // // Change the request to match this test case
       // req.headers = {
       //   authorization: 'Basic YWRtaddddddddddddW46Zm9v',
       // };
@@ -52,14 +52,14 @@ describe('Auth Middleware', () => {
 
     it('logs in an admin user with the right credentials', () => {
 
-      // Change the request to match this test case
+      // // Change the request to match this test case
       // req.headers = {
       //   authorization: 'Basic YWRtaW46cGFzc3dvcmQ=',
       // };
 
       // return middleware(req, res, next)
       //   .then(() => {
-      //     expect(next).toHaveBeenCalledWith();
+      //     // expect(next).toHaveBeenCalledWith();
       //   });
 
     }); // it()
