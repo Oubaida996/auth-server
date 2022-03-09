@@ -6,7 +6,7 @@ We will now be using that Token to re-authenticate users to shield access to any
 [Heroku link](https://obieda-auth-server.herokuapp.com/users)
 
 # PR
-[PR](https://github.com/Oubaida996/auth-server/pull/3)  
+[PR](https://github.com/Oubaida996/auth-server/pull/4)  
 
 # Actions
 [Action](https://github.com/Oubaida996/auth-server/actions)
