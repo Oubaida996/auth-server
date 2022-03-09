@@ -35,31 +35,31 @@ describe('Auth Middleware', () => {
 
     it('fails a login for a user (admin) with an incorrect token', () => {
 
-      // req.headers = {
-      //   authorization: 'Bearer thisisabadtoken',
-      // };
+      req.headers = {
+        authorization: 'Bearer thisisabadtoken',
+      };
 
-      // return middleware(req, res, next)
-      //   .then(() => {
-      //     expect(next).not.toHaveBeenCalled();
-      //     expect(res.status).toHaveBeenCalledWith(403);
-      //   });
+      return middleware(req, res, next)
+        .then(() => {
+          expect(next).not.toHaveBeenCalled();
+          expect(res.status).toHaveBeenCalledWith(403);
+        });
 
     });
 
     it('logs in a user with a proper token', () => {
 
-      // const user = { userName: 'admin' };
-      // const token = jwt.sign(user, process.env.SECRET);
+      const user = { userName: 'admin' };
+      const token = jwt.sign(user, process.env.SECRET);
 
-      // req.headers = {
-      //   authorization: `Bearer ${token}`,
-      // };
+      req.headers = {
+        authorization: `Bearer ${token}`,
+      };
 
-      // return middleware(req, res, next)
-      //   .then(() => {
-      //     expect(next).toHaveBeenCalledWith();
-      //   });
+      return middleware(req, res, next)
+        .then(() => {
+          expect(next).toHaveBeenCalledWith();
+        });
 
     });
 
